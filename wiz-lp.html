@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社Wiz｜中小企業のDX支援パートナー</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0066FF',
+            primaryDark: '#0052CC',
+            accent: '#FF6B00',
+            accentDark: '#E05E00',
+            dark: '#1A1A2E',
+            gray: {
+              50: '#F8F9FC',
+              100: '#F1F3F8',
+              200: '#E2E6EF',
+              400: '#9CA3B8',
+              600: '#5A6178',
+              800: '#2D3142',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap');
+    * { font-family: 'Noto Sans JP', sans-serif; }
+    html { scroll-behavior: smooth; }
+    .gradient-hero {
+      background: linear-gradient(135deg, #0066FF 0%, #0041A3 50%, #1A1A2E 100%);
+    }
+    .gradient-cta {
+      background: linear-gradient(135deg, #FF6B00 0%, #FF8C33 100%);
+    }
+    .gradient-cta:hover {
+      background: linear-gradient(135deg, #E05E00 0%, #FF6B00 100%);
+    }
+    .card-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 102, 255, 0.12);
+    }
+    .stat-number {
+      background: linear-gradient(135deg, #0066FF, #0041A3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .pulse-btn {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(255, 107, 0, 0); }
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- ===== HEADER ===== -->
+  <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="https://012cloud.jp/" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-sm">W</span>
+        </div>
+        <span class="font-bold text-lg text-dark">Wiz</span>
+        <span class="text-xs text-gray-400 hidden sm:inline ml-1">ITの総合商社</span>
+      </a>
+      <div class="flex items-center gap-3">
+        <a href="https://012cloud.jp/service" target="_blank" class="text-gray-600 text-sm font-medium hover:text-primary transition-colors hidden md:inline">サービス一覧</a>
+        <a href="https://012cloud.jp/article/label/introduction" target="_blank" class="text-gray-600 text-sm font-medium hover:text-primary transition-colors hidden md:inline">導入事例</a>
+        <a href="https://012cloud.jp/contact" target="_blank" class="bg-accent text-white text-sm font-bold px-5 py-2.5 rounded-lg hover:bg-accentDark transition-colors">
+          無料相談する
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== FIRST VIEW ===== -->
+  <section class="gradient-hero pt-28 pb-20 md:pt-36 md:pb-28 relative overflow-hidden">
+    <!-- 背景装飾 -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3"></div>
+    <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full translate-y-1/3 -translate-x-1/4"></div>
+
+    <div class="max-w-5xl mx-auto px-4 relative z-10">
+      <div class="text-center">
+        <p class="text-blue-200 text-sm md:text-base font-medium tracking-wide mb-4">
+          IT商材 <a href="https://012cloud.jp/service" target="_blank" class="text-white font-bold text-lg md:text-xl hover:text-yellow-300 transition-colors underline underline-offset-4 decoration-white/30">300</a> 超を扱う「<a href="https://012cloud.jp/info" target="_blank" class="hover:text-white transition-colors underline underline-offset-4 decoration-blue-200/30">ITの総合商社</a>」
+        </p>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+          御社に最適な<span class="text-yellow-300">1つ</span>を、<br class="hidden md:block">
+          <span class="text-yellow-300">300超</span>の選択肢から選ぶ。
+        </h1>
+        <p class="text-blue-100 text-base md:text-xl max-w-2xl mx-auto mb-4 leading-relaxed">
+          「何を導入すべきかわからない」を解決する<br class="md:hidden">
+          中小企業専門のDX支援パートナー
+        </p>
+        <p class="text-blue-200/80 text-sm mb-8">
+          <a href="https://012cloud.jp/article/label/introduction" target="_blank" class="hover:text-white transition-colors">取引実績 17,000社超</a> ｜ 全国拠点対応 ｜ 売上209億円の知見
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#cta-final" class="gradient-cta pulse-btn text-white font-bold text-lg px-10 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all inline-block">
+            まずは無料で相談する
+          </a>
+          <span class="text-blue-200 text-sm">※ 30秒で完了 / 費用は一切かかりません</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 課題提示 ===== -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <p class="text-primary font-bold text-sm tracking-widest mb-3">PROBLEM</p>
+        <h2 class="text-2xl md:text-4xl font-black text-dark mb-4">
+          中小企業DXの<br class="md:hidden">「3大つまずき」
+        </h2>
+        <p class="text-gray-600 max-w-xl mx-auto">
+          DXに取り組む中小企業の<span class="font-bold text-dark">約7割</span>が、以下のいずれかで止まっています。
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 fade-in">
+        <!-- 課題1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 card-hover">
+          <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-5">
+            <span class="text-3xl">😰</span>
+          </div>
+          <h3 class="font-bold text-lg text-dark mb-3">何から始めればいいか<br>わからない</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            DXツールは数千種類。自社の業種・規模・課題に合うものを見つけるだけで数ヶ月かかる。結局「後回し」に。
+          </p>
+        </div>
+        <!-- 課題2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 card-hover">
+          <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-5">
+            <span class="text-3xl">😫</span>
+          </div>
+          <h3 class="font-bold text-lg text-dark mb-3">比較検討に<br>時間が取れない</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            各ベンダーに問い合わせ → デモ → 見積比較。経営者がこれに割ける時間は限られている。本業が止まる。
+          </p>
+        </div>
+        <!-- 課題3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 card-hover">
+          <div class="w-14 h-14 bg-red-50 rounded-xl flex items-center justify-center mb-5">
+            <span class="text-3xl">😞</span>
+          </div>
+          <h3 class="font-bold text-lg text-dark mb-3">導入したが<br>定着しない</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            ツールを入れたのに社員が使わない。サポートも手薄で放置状態。投資が無駄になった経験がある。
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 fade-in">
+        <p class="text-gray-600 text-base md:text-lg">
+          これらすべてを<span class="font-bold text-primary">1社で解決</span>できるとしたら？
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 解決策 ===== -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <p class="text-primary font-bold text-sm tracking-widest mb-3">SOLUTION</p>
+        <h2 class="text-2xl md:text-4xl font-black text-dark mb-4">
+          Wizは「ITの総合商社」。<br>
+          <span class="text-primary">選ぶ・導入・定着</span>まで一気通貫。
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 items-center fade-in">
+        <!-- 左：説明 -->
+        <div>
+          <div class="space-y-6">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
+                <span class="text-primary font-black text-lg">1</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-dark text-lg mb-1">ヒアリング → 最適解を選定</h3>
+                <p class="text-gray-600 text-sm">業種・規模・予算・課題から、300超の商材の中で最適なものだけを提案。ベンダーに縛られない中立な立場。</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
+                <span class="text-primary font-black text-lg">2</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-dark text-lg mb-1">導入はWizが一括対応</h3>
+                <p class="text-gray-600 text-sm">複数ツールの導入もWiz1社で完結。窓口が一つだから、やり取りの手間がゼロに。</p>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center">
+                <span class="text-primary font-black text-lg">3</span>
+              </div>
+              <div>
+                <h3 class="font-bold text-dark text-lg mb-1">定着まで伴走サポート</h3>
+                <p class="text-gray-600 text-sm">導入して終わりではない。全国拠点の担当者が活用定着まで支援。「入れたけど使ってない」を防ぐ。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右：対応領域 -->
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200">
+          <p class="font-bold text-dark text-lg mb-5 text-center">対応領域</p>
+          <div class="grid grid-cols-2 gap-3">
+            <a href="https://012cloud.jp/business/office" target="_blank" class="bg-white rounded-xl p-4 text-center border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all block">
+              <p class="text-2xl mb-1">🏢</p>
+              <p class="text-sm font-bold text-dark">オフィスDX</p>
+              <p class="text-xs text-gray-400 mt-1">通信・セキュリティ・会計</p>
+              <p class="text-xs text-primary mt-2 font-medium">詳しく見る →</p>
+            </a>
+            <a href="https://012cloud.jp/business/restaurant" target="_blank" class="bg-white rounded-xl p-4 text-center border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all block">
+              <p class="text-2xl mb-1">🍽️</p>
+              <p class="text-sm font-bold text-dark">店舗DX</p>
+              <p class="text-xs text-gray-400 mt-1">決済・POS・集客</p>
+              <p class="text-xs text-primary mt-2 font-medium">詳しく見る →</p>
+            </a>
+            <a href="https://012cloud.jp/business/customer" target="_blank" class="bg-white rounded-xl p-4 text-center border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all block">
+              <p class="text-2xl mb-1">🏠</p>
+              <p class="text-sm font-bold text-dark">戸建てDX</p>
+              <p class="text-xs text-gray-400 mt-1">スマートホーム・回線</p>
+              <p class="text-xs text-primary mt-2 font-medium">詳しく見る →</p>
+            </a>
+            <a href="https://012cloud.jp/business/real_estate" target="_blank" class="bg-white rounded-xl p-4 text-center border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all block">
+              <p class="text-2xl mb-1">🏙️</p>
+              <p class="text-sm font-bold text-dark">マンションDX</p>
+              <p class="text-xs text-gray-400 mt-1">サイネージ・管理</p>
+              <p class="text-xs text-primary mt-2 font-medium">詳しく見る →</p>
+            </a>
+            <a href="https://012cloud.jp/category/ai_rpa" target="_blank" class="bg-white rounded-xl p-4 text-center border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all block">
+              <p class="text-2xl mb-1">🤖</p>
+              <p class="text-sm font-bold text-dark">AI活用支援</p>
+              <p class="text-xs text-gray-400 mt-1">業務自動化・効率化</p>
+              <p class="text-xs text-primary mt-2 font-medium">詳しく見る →</p>
+            </a>
+            <a href="https://012cloud.jp/category/environmental_equipment" target="_blank" class="bg-white rounded-xl p-4 text-center border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all block">
+              <p class="text-2xl mb-1">🌱</p>
+              <p class="text-sm font-bold text-dark">GX支援</p>
+              <p class="text-xs text-gray-400 mt-1">太陽光・蓄電池</p>
+              <p class="text-xs text-primary mt-2 font-medium">詳しく見る →</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ベネフィット ===== -->
+  <section class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <p class="text-primary font-bold text-sm tracking-widest mb-3">BENEFIT</p>
+        <h2 class="text-2xl md:text-4xl font-black text-dark mb-4">
+          Wiz導入で、こう変わる。
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 fade-in">
+        <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-200 card-hover">
+          <p class="text-gray-400 text-sm mb-2">ツール選定にかかる時間</p>
+          <div class="flex items-center justify-center gap-3 mb-3">
+            <span class="text-gray-400 text-2xl font-bold line-through">3ヶ月</span>
+            <span class="text-primary text-lg">→</span>
+            <span class="stat-number text-4xl font-black">1週間</span>
+          </div>
+          <p class="text-gray-600 text-sm">業種×規模に合った最適解を即提案。<br>比較検討の工数を<span class="font-bold">90%削減</span>。</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-200 card-hover">
+          <p class="text-gray-400 text-sm mb-2">導入時のベンダーやり取り</p>
+          <div class="flex items-center justify-center gap-3 mb-3">
+            <span class="text-gray-400 text-2xl font-bold line-through">5社</span>
+            <span class="text-primary text-lg">→</span>
+            <span class="stat-number text-4xl font-black">1社</span>
+          </div>
+          <p class="text-gray-600 text-sm">窓口はWizだけ。<br>複数ツール導入も<span class="font-bold">ワンストップ</span>で完結。</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-200 card-hover">
+          <p class="text-gray-400 text-sm mb-2">導入後の定着率</p>
+          <div class="flex items-center justify-center gap-3 mb-3">
+            <span class="stat-number text-4xl font-black">伴走型</span>
+          </div>
+          <p class="text-gray-600 text-sm">全国拠点から担当者がサポート。<br>「導入して終わり」には<span class="font-bold">させない</span>。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 信頼要素 ===== -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <p class="text-primary font-bold text-sm tracking-widest mb-3">TRACK RECORD</p>
+        <h2 class="text-2xl md:text-4xl font-black text-dark">
+          数字が証明する、Wizの実力。
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 fade-in">
+        <div class="text-center">
+          <p class="stat-number text-4xl md:text-5xl font-black">209</p>
+          <p class="text-gray-400 text-sm mt-1">億円（2024年度売上）</p>
+        </div>
+        <div class="text-center">
+          <p class="stat-number text-4xl md:text-5xl font-black">17,000</p>
+          <p class="text-gray-400 text-sm mt-1">社超の取引実績</p>
+        </div>
+        <div class="text-center">
+          <p class="stat-number text-4xl md:text-5xl font-black">300<span class="text-2xl">+</span></p>
+          <p class="text-gray-400 text-sm mt-1">取扱IT商材数</p>
+        </div>
+        <div class="text-center">
+          <p class="stat-number text-4xl md:text-5xl font-black">全国</p>
+          <p class="text-gray-400 text-sm mt-1">12拠点以上で対応</p>
+        </div>
+      </div>
+
+      <div class="mt-12 bg-gray-50 rounded-2xl p-8 border border-gray-200 fade-in">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <div class="flex-shrink-0 w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+            <span class="text-primary font-black text-2xl">W</span>
+          </div>
+          <div>
+            <p class="text-dark font-bold text-lg mb-2">なぜ17,000社に選ばれるのか？</p>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              特定メーカーの代理店ではなく、<a href="https://012cloud.jp/service" target="_blank" class="font-bold text-primary hover:underline">300超の商材を横断的に比較</a>できるポジションだからです。
+              保険の窓口が複数の保険会社から最適なプランを選ぶように、WizはIT商材の「選定のプロ」として機能します。
+              2012年の創業から12年、売上は3億円→209億円へ。<span class="font-bold">この成長が、顧客満足の証です。</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wiz cloudへの誘導リンク -->
+      <div class="mt-8 grid md:grid-cols-3 gap-4 fade-in">
+        <a href="https://012cloud.jp/service" target="_blank" class="flex items-center gap-3 bg-white rounded-xl p-5 border border-gray-200 hover:border-primary/30 hover:shadow-md transition-all group">
+          <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-lg">📋</span>
+          </div>
+          <div>
+            <p class="font-bold text-dark text-sm group-hover:text-primary transition-colors">サービス一覧を見る</p>
+            <p class="text-xs text-gray-400">300超の商材ラインナップ</p>
+          </div>
+          <span class="ml-auto text-gray-300 group-hover:text-primary transition-colors">→</span>
+        </a>
+        <a href="https://012cloud.jp/article/label/introduction" target="_blank" class="flex items-center gap-3 bg-white rounded-xl p-5 border border-gray-200 hover:border-primary/30 hover:shadow-md transition-all group">
+          <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-lg">📊</span>
+          </div>
+          <div>
+            <p class="font-bold text-dark text-sm group-hover:text-primary transition-colors">導入事例を見る</p>
+            <p class="text-xs text-gray-400">業種別の成功事例</p>
+          </div>
+          <span class="ml-auto text-gray-300 group-hover:text-primary transition-colors">→</span>
+        </a>
+        <a href="https://012cloud.jp/downloads" target="_blank" class="flex items-center gap-3 bg-white rounded-xl p-5 border border-gray-200 hover:border-primary/30 hover:shadow-md transition-all group">
+          <div class="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center flex-shrink-0">
+            <span class="text-lg">📥</span>
+          </div>
+          <div>
+            <p class="font-bold text-dark text-sm group-hover:text-primary transition-colors">無料資料をダウンロード</p>
+            <p class="text-xs text-gray-400">お役立ち資料を無料公開中</p>
+          </div>
+          <span class="ml-auto text-gray-300 group-hover:text-primary transition-colors">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 食べログ 豊島区 店舗一覧 ===== -->
+  <section class="py-16 md:py-24 bg-gray-50" id="tabelog-section">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10 fade-in">
+        <p class="text-accent font-bold text-sm tracking-widest mb-3">TABELOG DATA</p>
+        <h2 class="text-2xl md:text-4xl font-black text-dark mb-3">
+          豊島区の飲食店 <span class="text-primary">400</span>件
+        </h2>
+        <p class="text-gray-600">食べログ掲載の豊島区エリア店舗データ（全4,665件中）</p>
+      </div>
+
+      <!-- フィルター・検索 -->
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 mb-8 fade-in">
+        <div class="grid md:grid-cols-4 gap-4">
+          <div>
+            <label class="text-xs font-medium text-gray-500 block mb-1">キーワード検索</label>
+            <input type="text" id="tb-search" placeholder="店名で検索..." class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary" oninput="filterRestaurants()">
+          </div>
+          <div>
+            <label class="text-xs font-medium text-gray-500 block mb-1">エリア</label>
+            <select id="tb-area" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-white" onchange="filterRestaurants()">
+              <option value="">すべて</option>
+              <option value="池袋">池袋</option>
+              <option value="高田馬場">高田馬場</option>
+              <option value="早稲田">早稲田</option>
+              <option value="東池袋">東池袋</option>
+              <option value="目白">目白</option>
+              <option value="西早稲田">西早稲田</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs font-medium text-gray-500 block mb-1">ジャンル</label>
+            <select id="tb-genre" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-white" onchange="filterRestaurants()">
+              <option value="">すべて</option>
+              <option value="居酒屋">居酒屋</option>
+              <option value="焼肉">焼肉</option>
+              <option value="イタリアン">イタリアン</option>
+              <option value="中華料理">中華料理</option>
+              <option value="焼き鳥">焼き鳥</option>
+              <option value="海鮮">海鮮</option>
+              <option value="韓国料理">韓国料理</option>
+              <option value="寿司">寿司</option>
+              <option value="ラーメン">ラーメン</option>
+              <option value="カフェ">カフェ</option>
+              <option value="フレンチ">フレンチ</option>
+              <option value="タイ料理">タイ料理</option>
+            </select>
+          </div>
+          <div>
+            <label class="text-xs font-medium text-gray-500 block mb-1">並び替え</label>
+            <select id="tb-sort" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-white" onchange="filterRestaurants()">
+              <option value="rating-desc">評価が高い順</option>
+              <option value="reviews-desc">口コミが多い順</option>
+              <option value="name-asc">店名（あいうえお順）</option>
+            </select>
+          </div>
+        </div>
+        <div class="mt-4 flex items-center gap-4">
+          <p class="text-sm text-gray-500"><span id="tb-count" class="font-bold text-primary">400</span> 件表示</p>
+          <button onclick="resetFilters()" class="text-xs text-primary hover:underline">フィルターをリセット</button>
+        </div>
+      </div>
+
+      <!-- 店舗一覧テーブル -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden fade-in">
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-gray-50 border-b border-gray-200">
+                <th class="text-left px-5 py-3 font-semibold text-gray-600 w-8">#</th>
+                <th class="text-left px-5 py-3 font-semibold text-gray-600">店名</th>
+                <th class="text-left px-5 py-3 font-semibold text-gray-600 hidden md:table-cell">ジャンル</th>
+                <th class="text-left px-5 py-3 font-semibold text-gray-600">エリア</th>
+                <th class="text-center px-5 py-3 font-semibold text-gray-600">評価</th>
+                <th class="text-center px-5 py-3 font-semibold text-gray-600">口コミ</th>
+              </tr>
+            </thead>
+            <tbody id="tb-body"></tbody>
+          </table>
+        </div>
+        <!-- ページネーション -->
+        <div class="flex items-center justify-between px-5 py-4 border-t border-gray-200">
+          <button id="tb-prev" onclick="changePage(-1)" class="px-4 py-2 text-sm font-medium text-primary bg-primary/5 rounded-lg hover:bg-primary/10 disabled:opacity-30 disabled:cursor-not-allowed" disabled>前へ</button>
+          <p class="text-sm text-gray-500"><span id="tb-page-info">1</span></p>
+          <button id="tb-next" onclick="changePage(1)" class="px-4 py-2 text-sm font-medium text-primary bg-primary/5 rounded-lg hover:bg-primary/10 disabled:opacity-30 disabled:cursor-not-allowed">次へ</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Now ===== -->
+  <section class="py-16 md:py-24 bg-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center fade-in">
+      <p class="text-blue-300 font-bold text-sm tracking-widest mb-3">WHY NOW</p>
+      <h2 class="text-2xl md:text-4xl font-black mb-6">
+        「来年やろう」は、<br class="md:hidden"><span class="text-yellow-300">1年分の損失</span>です。
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6 text-left mt-10">
+        <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <p class="text-yellow-300 font-bold text-sm mb-2">補助金の活用</p>
+          <p class="text-white/80 text-sm leading-relaxed">
+            IT導入補助金・事業再構築補助金の活用で、導入コストを<span class="text-yellow-300 font-bold">最大75%削減</span>できる可能性。申請サポートもWizが対応。
+          </p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <p class="text-yellow-300 font-bold text-sm mb-2">競合の先行</p>
+          <p class="text-white/80 text-sm leading-relaxed">
+            同業他社がDX化を進めれば、採用力・集客力・コスト効率すべてで差がつく。<span class="text-yellow-300 font-bold">先行者優位</span>は今しかない。
+          </p>
+        </div>
+        <div class="bg-white/10 rounded-xl p-6 backdrop-blur-sm">
+          <p class="text-yellow-300 font-bold text-sm mb-2">人手不足の深刻化</p>
+          <p class="text-white/80 text-sm leading-relaxed">
+            人を増やすのが難しい時代。<span class="text-yellow-300 font-bold">ITで生産性を上げる</span>のは「選択」ではなく「必須」になっている。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 導入フロー ===== -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12 fade-in">
+        <p class="text-primary font-bold text-sm tracking-widest mb-3">FLOW</p>
+        <h2 class="text-2xl md:text-4xl font-black text-dark mb-4">
+          最短1週間で導入開始。
+        </h2>
+        <p class="text-gray-600">まずは30分の無料相談から。</p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-6 fade-in">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-black text-2xl">1</span>
+          </div>
+          <p class="font-bold text-dark mb-2">無料相談</p>
+          <p class="text-gray-600 text-sm">現状の課題を<br>ヒアリング</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-black text-2xl">2</span>
+          </div>
+          <p class="font-bold text-dark mb-2">最適プラン提案</p>
+          <p class="text-gray-600 text-sm">300超の商材から<br>御社専用の構成を設計</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-black text-2xl">3</span>
+          </div>
+          <p class="font-bold text-dark mb-2">導入サポート</p>
+          <p class="text-gray-600 text-sm">設定・導入を<br>Wizが一括対応</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-white font-black text-2xl">4</span>
+          </div>
+          <p class="font-bold text-dark mb-2">定着フォロー</p>
+          <p class="text-gray-600 text-sm">活用が定着するまで<br>継続サポート</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA（最終） ===== -->
+  <section id="cta-final" class="py-16 md:py-24 gradient-hero relative overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/3"></div>
+    <div class="max-w-3xl mx-auto px-4 text-center relative z-10 fade-in">
+      <h2 class="text-2xl md:text-4xl font-black text-white mb-4">
+        御社のDX、<br class="md:hidden">まずは相談から。
+      </h2>
+      <p class="text-blue-100 text-base md:text-lg mb-8 leading-relaxed">
+        「何を入れればいいかわからない」で止まっていませんか？<br>
+        Wizなら、30分のヒアリングで最適解をお見せします。
+      </p>
+
+      <div class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl max-w-lg mx-auto">
+        <p class="text-dark font-bold text-xl mb-2">無料相談を予約する</p>
+        <p class="text-gray-400 text-sm mb-6">費用は一切かかりません</p>
+
+        <form class="space-y-4 text-left" onsubmit="event.preventDefault(); document.getElementById('submit-msg').classList.remove('hidden');">
+          <div>
+            <label class="text-sm font-medium text-gray-600 block mb-1">会社名</label>
+            <input type="text" placeholder="株式会社〇〇" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-600 block mb-1">お名前</label>
+            <input type="text" placeholder="山田 太郎" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-600 block mb-1">メールアドレス</label>
+            <input type="email" placeholder="example@company.co.jp" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-600 block mb-1">電話番号</label>
+            <input type="tel" placeholder="03-1234-5678" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors">
+          </div>
+          <div>
+            <label class="text-sm font-medium text-gray-600 block mb-1">ご相談内容（任意）</label>
+            <textarea rows="3" placeholder="現在の課題やご検討中の内容をお聞かせください" class="w-full border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-colors resize-none"></textarea>
+          </div>
+          <button type="submit" class="w-full gradient-cta text-white font-bold text-lg py-4 rounded-xl shadow-lg hover:shadow-xl transition-all">
+            無料相談を予約する（30秒で完了）
+          </button>
+          <p id="submit-msg" class="hidden text-center text-green-600 font-bold text-sm mt-2">送信が完了しました。担当者よりご連絡いたします。</p>
+        </form>
+
+        <div class="flex items-center justify-center gap-4 mt-6 text-xs text-gray-400">
+          <span>🔒 SSL暗号化通信</span>
+          <span>｜</span>
+          <span>営業電話なし</span>
+        </div>
+
+        <!-- 別の相談方法 -->
+        <div class="mt-6 pt-6 border-t border-gray-100">
+          <p class="text-gray-400 text-xs mb-3">他の方法で相談する</p>
+          <div class="flex gap-3 justify-center">
+            <a href="https://012cloud.jp/contact" target="_blank" class="flex items-center gap-1.5 bg-gray-50 hover:bg-gray-100 text-gray-600 text-xs font-medium px-4 py-2 rounded-lg transition-colors">
+              📧 Webフォーム
+            </a>
+            <a href="https://012cloud.jp/consultation-form" target="_blank" class="flex items-center gap-1.5 bg-gray-50 hover:bg-gray-100 text-gray-600 text-xs font-medium px-4 py-2 rounded-lg transition-colors">
+              💬 経営相談フォーム
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-dark py-12 text-center">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="flex items-center justify-center gap-2 mb-6">
+        <a href="https://012cloud.jp/" target="_blank" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <div class="w-7 h-7 bg-primary rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xs">W</span>
+          </div>
+          <span class="font-bold text-white">株式会社Wiz</span>
+        </a>
+      </div>
+      <!-- フッターリンク -->
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-6 text-sm">
+        <a href="https://012cloud.jp/" target="_blank" class="text-gray-400 hover:text-white transition-colors">Wiz cloud</a>
+        <a href="https://012cloud.jp/service" target="_blank" class="text-gray-400 hover:text-white transition-colors">サービス一覧</a>
+        <a href="https://012cloud.jp/article/label/introduction" target="_blank" class="text-gray-400 hover:text-white transition-colors">導入事例</a>
+        <a href="https://012cloud.jp/article" target="_blank" class="text-gray-400 hover:text-white transition-colors">お役立ち記事</a>
+        <a href="https://012cloud.jp/downloads" target="_blank" class="text-gray-400 hover:text-white transition-colors">資料DL</a>
+        <a href="https://012cloud.jp/contact" target="_blank" class="text-gray-400 hover:text-white transition-colors">お問い合わせ</a>
+        <a href="https://012cloud.jp/company" target="_blank" class="text-gray-400 hover:text-white transition-colors">会社概要</a>
+      </div>
+      <p class="text-gray-400 text-xs mb-2">
+        東京都豊島区南大塚2-25-15 South新大塚ビル12F
+      </p>
+      <p class="text-gray-600 text-xs">
+        &copy; 2024 Wiz Co., Ltd. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+
+  <script>
+    const ALL_RESTAURANTS = [{"name":"馬肉バル 跳ね馬 池袋東口店","genre":"イタリアン、バル、ワインバー","area":"池袋","rating":3.38,"reviews":210},{"name":"串家物語 LABI1池袋店","genre":"串揚げ、居酒屋、ビュッフェ","area":"池袋","rating":3.08,"reviews":191},{"name":"大衆居酒屋 とりいちず 池袋西口店","genre":"居酒屋、焼き鳥、水炊き","area":"池袋","rating":3.06,"reviews":85},{"name":"ランドーズ 池袋東口駅前店","genre":"居酒屋、イタリアン、カフェ","area":"池袋","rating":3.3,"reviews":126},{"name":"大衆居酒屋 とりいちず 池袋東口店","genre":"居酒屋、焼き鳥、水炊き","area":"池袋","rating":3.07,"reviews":165},{"name":"酒場大穴 高田馬場店","genre":"日本料理、寿司、おでん","area":"高田馬場","rating":3.15,"reviews":28},{"name":"東南アジア屋台 アガリコ食堂","genre":"タイ料理、アジア・エスニック、居酒屋","area":"池袋","rating":3.48,"reviews":418},{"name":"月島もんじゃだしや 目白駅前店","genre":"もんじゃ焼き、居酒屋、お好み焼き","area":"目白","rating":3.15,"reviews":54},{"name":"高田馬場駅前 魚群","genre":"居酒屋、海鮮、日本料理","area":"高田馬場","rating":3.02,"reviews":12},{"name":"てんぐ大ホール 池袋サンシャイン通り店","genre":"居酒屋","area":"池袋","rating":3.08,"reviews":82},{"name":"とこなつ家 池袋店","genre":"ダイニングバー、バー、カレー","area":"池袋","rating":3.16,"reviews":23},{"name":"和・琉球料理 ～隠れ家～ 心ゆくる","genre":"沖縄料理、居酒屋、海鮮","area":"池袋","rating":3.26,"reviews":33},{"name":"餃子酒場 ぶらんちゅ","genre":"沖縄料理、餃子、居酒屋","area":"池袋","rating":3.22,"reviews":123},{"name":"七輪焼肉 安安 池袋西口店","genre":"焼肉、ホルモン、居酒屋","area":"池袋","rating":3.1,"reviews":69},{"name":"九州うまいもんと焼酎 芋蔵 池袋東口店","genre":"居酒屋、もつ鍋、しゃぶしゃぶ","area":"池袋","rating":3.09,"reviews":143},{"name":"大人のご馳走屋 魚錠 池袋東通り店","genre":"海鮮、居酒屋、日本酒バー","area":"池袋","rating":3.33,"reviews":92},{"name":"昔ばなし 別館","genre":"居酒屋、もつ鍋、海鮮","area":"池袋","rating":3.42,"reviews":314},{"name":"pon屋","genre":"居酒屋、海鮮、日本酒バー","area":"池袋","rating":3.38,"reviews":94},{"name":"藍灯","genre":"居酒屋","area":"豊島区","rating":3.09,"reviews":21},{"name":"酒ト肴 オンザコーナー","genre":"居酒屋、ビストロ、ダイニングバー","area":"高田馬場","rating":3.53,"reviews":148},{"name":"魚吉酒場 池袋店","genre":"居酒屋、海鮮、おでん","area":"池袋","rating":3.57,"reviews":362},{"name":"焼き鳥・鶏料理 さいたどう","genre":"焼き鳥、水炊き、居酒屋","area":"高田馬場","rating":3.34,"reviews":179},{"name":"プレゴ・パケット","genre":"イタリアン、ヨーロッパ料理、パスタ","area":"池袋","rating":3.46,"reviews":341},{"name":"蔵之助","genre":"ちゃんこ鍋、居酒屋、海鮮","area":"池袋","rating":3.42,"reviews":224},{"name":"大衆酒場 いける屋","genre":"居酒屋、焼き鳥、もつ鍋","area":"高田馬場","rating":3.15,"reviews":38},{"name":"産直海鮮と全国唯一揚げ立て栃尾揚げ あげ屋","genre":"居酒屋、海鮮、焼き鳥","area":"高田馬場","rating":3.38,"reviews":283},{"name":"Inf 神田川イタリアン 早稲田店","genre":"イタリアン、オイスターバー、シーフード","area":"早稲田","rating":3.37,"reviews":57},{"name":"ONDER","genre":"トルコ料理","area":"西早稲田","rating":null,"reviews":3},{"name":"鉄板焼き あさひ","genre":"鉄板焼き、ステーキ、フレンチ","area":"池袋","rating":3.64,"reviews":483},{"name":"完全個室居酒屋 串ごろ 池袋店","genre":"居酒屋、焼き鳥、鍋","area":"池袋","rating":3.12,"reviews":187},{"name":"てけてけ 池袋西口店","genre":"居酒屋、焼き鳥、水炊き","area":"池袋","rating":3.07,"reviews":64},{"name":"PUMP craft beer bar","genre":"ダイニングバー、ビアバー、アメリカ料理","area":"池袋","rating":3.34,"reviews":132},{"name":"三代目 池袋じげもんとん","genre":"居酒屋、豚しゃぶ、天ぷら","area":"池袋","rating":3.49,"reviews":164},{"name":"Brasserie Laiton","genre":"ビストロ、フレンチ、カフェ","area":"池袋","rating":3.57,"reviews":272},{"name":"四川料理 品品香","genre":"四川料理、火鍋、中華料理","area":"池袋","rating":3.37,"reviews":159},{"name":"民福 北京烤鴨店 高田馬場店","genre":"中華料理、四川料理","area":"高田馬場","rating":3.37,"reviews":222},{"name":"焼き鳥 しょうちゃん 池袋店","genre":"焼き鳥、居酒屋、焼酎バー","area":"池袋","rating":3.32,"reviews":112},{"name":"炭火ビストロ ゴーバル 高田馬場店","genre":"ビストロ、イタリアン、バル","area":"高田馬場","rating":3.42,"reviews":312},{"name":"鮨 笹屋","genre":"寿司、海鮮、居酒屋","area":"早稲田","rating":3.26,"reviews":39},{"name":"ダイニングダーツバーBee 池袋WEST店","genre":"ダーツ、ダイニングバー","area":"池袋","rating":3.05,"reviews":5},{"name":"石庫門 高田馬場店","genre":"中華料理、小籠包、飲茶・点心","area":"高田馬場","rating":3.4,"reviews":434},{"name":"炙処 火ノ膳 高田馬場 路地入ったところ店","genre":"居酒屋、海鮮、日本酒バー","area":"高田馬場","rating":3.52,"reviews":315},{"name":"自起屋","genre":"韓国料理、居酒屋、焼肉","area":"池袋","rating":3.4,"reviews":257},{"name":"Tefu","genre":"居酒屋、飲茶・点心","area":"池袋","rating":3.27,"reviews":51},{"name":"クッチーナカフェ オリーヴァ","genre":"イタリアン、ピザ、バーベキュー","area":"高田馬場","rating":3.37,"reviews":166},{"name":"牛若丸 池袋本店","genre":"焼肉、ホルモン、居酒屋","area":"池袋","rating":3.43,"reviews":466},{"name":"池袋大酒場 池袋西口店","genre":"中華料理、居酒屋、餃子","area":"池袋","rating":3.25,"reviews":75},{"name":"ダイニングダーツバーBee 池袋店","genre":"ダーツ、バー","area":"池袋","rating":3.06,"reviews":22},{"name":"鹿児島県霧島市 塚田農場 池袋サンシャイン通り店","genre":"居酒屋、鳥料理、肉料理","area":"池袋","rating":3.07,"reviews":69},{"name":"NaNaiRo","genre":"その他","area":"池袋","rating":3.04,"reviews":4},{"name":"かまくら個室×鎌倉野菜 かまくらや 池袋店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.16,"reviews":47},{"name":"百福園鮮烤","genre":"中華料理、居酒屋、四川料理","area":"池袋","rating":3.27,"reviews":65},{"name":"アガリコオリエンタルビストロ","genre":"タイ料理、ビストロ、居酒屋","area":"池袋","rating":3.48,"reviews":803},{"name":"餃子のかっちゃん 池袋東口店","genre":"餃子、居酒屋","area":"池袋","rating":3.18,"reviews":201},{"name":"洋風飯店cue9","genre":"居酒屋、洋食、中華料理","area":"池袋","rating":3.34,"reviews":142},{"name":"THE SUSHI TOKYO 旬","genre":"寿司、海鮮、日本料理","area":"池袋","rating":3.53,"reviews":352},{"name":"Hawaiian Diner HANAO CAFE 池袋パルコ店","genre":"ハワイ料理、ハンバーグ、カフェ","area":"池袋","rating":3.32,"reviews":95},{"name":"完全個室居酒屋 九州蔵 池袋店","genre":"居酒屋、焼き鳥、おでん","area":"池袋","rating":3.52,"reviews":159},{"name":"フォー ベト レストラン","genre":"ベトナム料理","area":"池袋","rating":3.49,"reviews":861},{"name":"稲水器 あまてらす","genre":"海鮮、日本料理、居酒屋","area":"池袋","rating":3.43,"reviews":193},{"name":"HEARTH SMOKED GRILL＆GALETTE","genre":"イタリアン、カフェ、ダイニングバー","area":"池袋","rating":3.49,"reviews":873},{"name":"たくみ 池袋店","genre":"居酒屋、日本料理、鍋","area":"池袋","rating":3.06,"reviews":21},{"name":"軍鶏一 池袋店","genre":"焼き鳥、鍋、鳥料理","area":"池袋","rating":3.45,"reviews":267},{"name":"七輪焼肉 安安 高田馬場店","genre":"焼肉、居酒屋、鳥料理","area":"高田馬場","rating":3.05,"reviews":60},{"name":"旨唐揚げと居酒メシ ミライザカ 高田馬場駅前店","genre":"居酒屋、焼き鳥、もつ鍋","area":"高田馬場","rating":3.03,"reviews":36},{"name":"七輪焼肉 安安 池袋東口店","genre":"焼肉、居酒屋、鳥料理","area":"池袋","rating":3.05,"reviews":61},{"name":"ビストロ マメ","genre":"イタリアン、ビストロ、ワインバー","area":"池袋","rating":3.26,"reviews":115},{"name":"2100K冒鴨燙肚","genre":"中華料理、四川料理、鍋","area":"池袋","rating":3.09,"reviews":34},{"name":"不乱人ノ下","genre":"中華料理、沖縄料理、居酒屋","area":"池袋","rating":3.21,"reviews":26},{"name":"VinViande","genre":"イタリアン、ワインバー、ビストロ","area":"池袋","rating":3.51,"reviews":59},{"name":"日本酒と海鮮 痛風屋 池袋西口店","genre":"居酒屋、海鮮、オイスターバー","area":"池袋","rating":3.43,"reviews":289},{"name":"柳寿司 池袋本店","genre":"寿司、海鮮","area":"池袋","rating":3.3,"reviews":81},{"name":"豚肉居酒屋 濃いめ 池袋東口店","genre":"居酒屋、肉料理","area":"池袋","rating":3.06,"reviews":8},{"name":"やきとん木々家 高田馬場店","genre":"居酒屋、もつ焼き","area":"高田馬場","rating":3.3,"reviews":36},{"name":"Wine restaurant The Attachment 池袋店","genre":"イタリアン、肉バル","area":"池袋","rating":3.48,"reviews":662},{"name":"池袋 鮨 貴山","genre":"寿司、海鮮、日本料理","area":"池袋","rating":3.41,"reviews":390},{"name":"個室韓国焼肉 萬和苑 池袋店","genre":"焼肉、居酒屋、韓国料理","area":"池袋","rating":3.15,"reviews":64},{"name":"鶏のまるよし 池袋店","genre":"居酒屋、焼き鳥、日本酒バー","area":"池袋","rating":3.32,"reviews":97},{"name":"連家 池袋東口店","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.36,"reviews":183},{"name":"肉問屋 焼肉 池袋いちば","genre":"焼肉、居酒屋、ホルモン","area":"池袋","rating":3.09,"reviews":45},{"name":"しゃぶしゃぶ 将泰庵 ヨドバシHD池袋ビル店","genre":"しゃぶしゃぶ、ハンバーグ、すき焼き","area":"池袋","rating":3.44,"reviews":189},{"name":"カラオケパセラ 池袋本店","genre":"カラオケ、その他","area":"池袋","rating":3.16,"reviews":106},{"name":"焼肉スタジアム JAN 池袋東口店","genre":"焼肉、ホルモン、居酒屋","area":"東池袋","rating":3.29,"reviews":138},{"name":"ひねり蛇口ハイ 大衆酒泉テルマエ 池袋駅東口泉","genre":"居酒屋、焼き鳥、中華料理","area":"池袋","rating":3.04,"reviews":16},{"name":"金の蔵 池袋サンシャイン通り店","genre":"居酒屋、焼き鳥、寿司","area":"池袋","rating":3.08,"reviews":95},{"name":"焼肉・韓国料理 万世家 池袋店","genre":"焼肉、韓国料理、ホルモン","area":"池袋","rating":3.09,"reviews":29},{"name":"東京Jimbei","genre":"おでん、居酒屋、焼き鳥","area":"高田馬場","rating":3.35,"reviews":105},{"name":"池袋ワイン倶楽部","genre":"イタリアン、ワインバー、バル","area":"池袋","rating":3.44,"reviews":339},{"name":"魚心 池袋","genre":"居酒屋、海鮮、串焼き","area":"池袋","rating":3.39,"reviews":125},{"name":"ムガル 早稲田店","genre":"インド料理、インドカレー、アジア・エスニック","area":"早稲田","rating":3.42,"reviews":125},{"name":"炭火焼肉 あもん","genre":"焼肉、ホルモン","area":"池袋","rating":3.51,"reviews":635},{"name":"ねぎま 三ぞう 池袋西口店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.41,"reviews":610},{"name":"完全個室 焼肉池袋 蔵","genre":"焼肉、居酒屋、ホルモン","area":"池袋","rating":3.09,"reviews":46},{"name":"やきとん 炭火焼き 多吉酒場 池袋店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.09,"reviews":24},{"name":"くいもの屋わん 池袋西口公園前店","genre":"居酒屋、日本料理、海鮮","area":"池袋","rating":3.04,"reviews":54},{"name":"ひ暮らし","genre":"居酒屋、海鮮、日本酒バー","area":"都電雑司ケ谷","rating":3.53,"reviews":293},{"name":"串屋 松吉 高田馬場店","genre":"もつ焼き、焼き鳥、居酒屋","area":"西早稲田","rating":3.17,"reviews":45},{"name":"大衆居酒屋 もんじゃ酒場 だしや 池袋西口駅前店","genre":"もんじゃ焼き、居酒屋、お好み焼き","area":"池袋","rating":3.34,"reviews":212},{"name":"遊食家 厨 高田馬場店","genre":"居酒屋、もつ鍋、中華料理","area":"高田馬場","rating":3.18,"reviews":62},{"name":"ジンギスカン 神の羊 本店","genre":"ジンギスカン、焼肉、居酒屋","area":"池袋","rating":3.43,"reviews":194},{"name":"五の五 池袋芸術劇場前店","genre":"居酒屋","area":"池袋","rating":3.32,"reviews":95},{"name":"カラオケパセラ 池袋西口店","genre":"カラオケ、その他","area":"池袋","rating":3.12,"reviews":49},{"name":"だるま 池袋東口店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.21,"reviews":53},{"name":"GINTO 池袋店","genre":"フレンチ、イノベーティブ","area":"池袋","rating":3.48,"reviews":744},{"name":"シュマッツ ルミネ池袋","genre":"ビアホール、バル、ビアバー","area":"池袋","rating":3.14,"reviews":127},{"name":"日本晴ルTOKOTON","genre":"居酒屋、海鮮、日本酒バー","area":"高田馬場","rating":3.26,"reviews":36},{"name":"猫のいるBar スニャック","genre":"その他","area":"池袋","rating":3.0,"reviews":1},{"name":"サイアムセラドン 池袋東武店","genre":"タイ料理、ダイニングバー、カフェ","area":"池袋","rating":3.39,"reviews":290},{"name":"もつ焼きばん 高田馬場店","genre":"もつ焼き、居酒屋、もつ鍋","area":"高田馬場","rating":3.43,"reviews":193},{"name":"海鮮個室居酒屋 かぶと 池袋西口店","genre":"居酒屋、海鮮、かに","area":"池袋","rating":3.13,"reviews":95},{"name":"忠治","genre":"居酒屋、海鮮、鍋","area":"池袋","rating":3.49,"reviews":49},{"name":"カラオケ付き居酒屋鶏ヤロー! 池袋東口店","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.02,"reviews":2},{"name":"キチリ オレンジ レーベル 池袋東口","genre":"居酒屋、イタリアン、ダイニングバー","area":"池袋","rating":3.09,"reviews":230},{"name":"焼肉 ホルモン閻魔","genre":"焼肉、ホルモン、居酒屋","area":"高田馬場","rating":3.39,"reviews":156},{"name":"華湘 東武池袋店","genre":"中華料理、海鮮","area":"池袋","rating":3.47,"reviews":299},{"name":"生パスタ＆ワインバル ビアージョ WACCA池袋店","genre":"イタリアン、パスタ、バル","area":"池袋","rating":3.35,"reviews":182},{"name":"IZAKAYA からそる","genre":"居酒屋、バー","area":"池袋","rating":3.36,"reviews":146},{"name":"RACINES ORGANIC","genre":"イタリアン、カフェ、パン","area":"目白","rating":3.45,"reviews":231},{"name":"全席個室 楽蔵 池袋西口店","genre":"居酒屋、焼き鳥、鍋","area":"池袋","rating":3.04,"reviews":55},{"name":"貝だしおでんと串揚げ 食堂ト酒","genre":"居酒屋、おでん、串揚げ","area":"池袋","rating":3.4,"reviews":154},{"name":"焼肉としゃぶしゃぶ 焼きしゃぶjp","genre":"肉料理、しゃぶしゃぶ","area":"池袋","rating":3.5,"reviews":178},{"name":"四季宴 池袋本店","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.35,"reviews":148},{"name":"中華居酒屋 楽膳軒 壹方天地","genre":"中華料理、居酒屋、餃子","area":"池袋","rating":3.11,"reviews":42},{"name":"韓国料理屋 きむん家 池袋店","genre":"韓国料理","area":"池袋","rating":3.31,"reviews":45},{"name":"鮪匠 池袋店","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.53,"reviews":86},{"name":"酒場 つむぎ堂 池袋店","genre":"居酒屋、餃子、牛タン","area":"池袋","rating":null,"reviews":73},{"name":"池袋 すし 福寿","genre":"寿司","area":"池袋","rating":3.39,"reviews":209},{"name":"地酒ト魚ト肴 酒肆 魚や","genre":"居酒屋、日本酒バー、海鮮","area":"池袋","rating":3.33,"reviews":108},{"name":"バル014 馬場ワイン食堂","genre":"ワインバー、スペイン料理、ビストロ","area":"高田馬場","rating":3.53,"reviews":257},{"name":"大衆居酒屋 大ちゃん","genre":"居酒屋、焼き鳥、日本料理","area":"高田馬場","rating":3.17,"reviews":75},{"name":"炭市場 どんどこ 西池袋店","genre":"日本酒バー、居酒屋、焼き鳥","area":"池袋","rating":3.28,"reviews":97},{"name":"BATON 東武百貨店 池袋店","genre":"ビストロ、ステーキ、イタリアン","area":"池袋","rating":3.47,"reviews":287},{"name":"焼肉いたみ 池袋 はなれ","genre":"焼肉、ホルモン、居酒屋","area":"池袋","rating":3.11,"reviews":24},{"name":"磯丸水産 池袋サンシャイン通り店","genre":"居酒屋、海鮮、寿司","area":"池袋","rating":3.08,"reviews":87},{"name":"芝浦食肉 池袋東口店","genre":"ホルモン、焼肉、居酒屋","area":"池袋","rating":3.32,"reviews":183},{"name":"広瀬商店：","genre":"居酒屋、焼き鳥、もつ鍋","area":"池袋","rating":3.15,"reviews":22},{"name":"炭火焼き 牛タン酒場 いけたん 池袋店","genre":"居酒屋、牛タン","area":"池袋","rating":3.53,"reviews":451},{"name":"大漁市場 魚ます 池袋店","genre":"居酒屋、海鮮、おでん","area":"池袋","rating":3.3,"reviews":104},{"name":"大阪焼肉・ホルモン ふたご 池袋西口店","genre":"焼肉、ホルモン、居酒屋","area":"池袋","rating":3.12,"reviews":125},{"name":"池袋 SANGA","genre":"日本料理、うなぎ","area":"池袋","rating":3.38,"reviews":74},{"name":"賢合庄","genre":"火鍋、四川料理","area":"高田馬場","rating":3.4,"reviews":156},{"name":"ソウジュ","genre":"ダイニングバー、ワインバー、フレンチ","area":"高田馬場","rating":3.23,"reviews":53},{"name":"ガーリックチップス","genre":"ダイニングバー、居酒屋、ステーキ","area":"高田馬場","rating":3.34,"reviews":104},{"name":"焼肉うし 別館","genre":"焼肉、居酒屋、ホルモン","area":"池袋","rating":3.09,"reviews":24},{"name":"味の居酒屋 北の國から","genre":"居酒屋、海鮮、日本料理","area":"池袋","rating":3.23,"reviews":42},{"name":"極・和牛焼肉やざわ","genre":"焼肉、ホルモン、韓国料理","area":"池袋","rating":3.39,"reviews":135},{"name":"焼肉 あぶる。 池袋店","genre":"焼肉、ホルモン、居酒屋","area":"池袋","rating":3.42,"reviews":177},{"name":"串カツ田中 高田馬場研修センター店","genre":"串揚げ、居酒屋、うどん","area":"高田馬場","rating":3.06,"reviews":42},{"name":"博多串焼きよかろうもん 東池袋店","genre":"居酒屋、もつ鍋、串焼き","area":"池袋","rating":3.44,"reviews":416},{"name":"上海富春小籠 池袋西口2号店","genre":"中華料理、小籠包、飲茶・点心","area":"池袋","rating":3.38,"reviews":100},{"name":"燻製創作居酒屋けむり 高田馬場","genre":"ダイニングバー、イタリアン、居酒屋","area":"高田馬場","rating":3.38,"reviews":105},{"name":"ロシア料理 チャイカ","genre":"ロシア料理、ワインバー、洋食","area":"高田馬場","rating":3.49,"reviews":484},{"name":"てけてけ 池袋駅前店","genre":"居酒屋、焼き鳥、鳥料理","area":"池袋","rating":3.03,"reviews":10},{"name":"さかえや 高田馬場總本店","genre":"居酒屋、鳥料理、水炊き","area":"高田馬場","rating":3.26,"reviews":212},{"name":"めっけもん","genre":"居酒屋、海鮮、パスタ","area":"高田馬場","rating":3.37,"reviews":137},{"name":"Global French Kitchen 雫","genre":"フレンチ、イタリアン、ビストロ","area":"池袋","rating":3.66,"reviews":183},{"name":"CHEESE CHEESE ＆ Meat. COMTE","genre":"チーズ料理、イタリアン、ダイニングバー","area":"池袋","rating":3.4,"reviews":295},{"name":"和食堂 素","genre":"食堂","area":"池袋","rating":3.25,"reviews":52},{"name":"海鮮料理と地鶏焼き鳥 甲羅丸 池袋店","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.31,"reviews":39},{"name":"オーシャンダイニング","genre":"居酒屋、チーズ料理、肉バル","area":"池袋","rating":3.09,"reviews":24},{"name":"夕凪 池袋店","genre":"居酒屋、鍋、海鮮","area":"池袋","rating":3.5,"reviews":57},{"name":"青山","genre":"居酒屋、海鮮、すき焼き","area":"池袋","rating":3.23,"reviews":62},{"name":"餃子 小籠包 福包酒場 池袋サンシャイン60通り店","genre":"中華料理、居酒屋、飲茶・点心","area":"池袋","rating":3.26,"reviews":104},{"name":"イルキャンティ・オヴェスト","genre":"イタリアン、居酒屋、ダイニングバー","area":"池袋","rating":3.38,"reviews":557},{"name":"焼き鳥と馬刺し 紅はち 高田馬場店","genre":"居酒屋、焼き鳥、海鮮","area":"高田馬場","rating":3.03,"reviews":6},{"name":"魚然 池袋店","genre":"居酒屋、ろばた焼き、海鮮","area":"池袋","rating":3.08,"reviews":75},{"name":"高田馬場 Ristorante En","genre":"イタリアン、オーガニック","area":"高田馬場","rating":3.39,"reviews":173},{"name":"ニュー大衆居酒屋 三ぞう 池袋芸術劇場前店","genre":"居酒屋、焼き鳥、鳥料理","area":"池袋","rating":3.3,"reviews":162},{"name":"魚串・鮮魚・日本酒 魚徳","genre":"居酒屋、海鮮、日本酒バー","area":"池袋","rating":3.41,"reviews":329},{"name":"LUMPINI","genre":"タイ料理","area":"池袋","rating":3.38,"reviews":109},{"name":"THE CELLAR TOKYO","genre":"ワインバー、ダイニングバー、イタリアン","area":"池袋","rating":3.22,"reviews":23},{"name":"Plumier","genre":"ビストロ、フレンチ、ワインバー","area":"池袋","rating":3.35,"reviews":84},{"name":"和食・酒 えん 池袋パルコ店","genre":"居酒屋、日本酒バー、日本料理","area":"池袋","rating":3.22,"reviews":194},{"name":"はなさく 蔵之助はなれ","genre":"しゃぶしゃぶ、ちゃんこ鍋、居酒屋","area":"池袋","rating":3.23,"reviews":43},{"name":"焼鳥と酒 木々家 池袋西口本店","genre":"焼き鳥、居酒屋、鳥料理","area":"池袋","rating":3.38,"reviews":101},{"name":"焼肉ホルモン ボンズ 池袋本館","genre":"焼肉、ホルモン、居酒屋","area":"池袋","rating":3.57,"reviews":324},{"name":"Sekihara pasta&wine","genre":"ダイニングバー、バル、パスタ","area":"早稲田","rating":3.32,"reviews":79},{"name":"一茶","genre":"居酒屋、日本酒バー、海鮮","area":"池袋","rating":3.34,"reviews":132},{"name":"fish&wine BLUE OCEAN GRILL","genre":"ヨーロッパ料理、シーフード","area":"池袋","rating":3.47,"reviews":567},{"name":"池袋パルコ コリアンBBQビアガーデン","genre":"ビアガーデン、焼肉、バーベキュー","area":"池袋","rating":3.38,"reviews":146},{"name":"広島お好み焼き・鉄板焼き 倉はし 高田馬場店","genre":"お好み焼き、鉄板焼き、居酒屋","area":"高田馬場","rating":3.48,"reviews":545},{"name":"羊のロッヂ","genre":"ジンギスカン、焼肉、鍋","area":"面影橋","rating":3.42,"reviews":183},{"name":"サンシャイン クルーズ・クルーズ","genre":"フレンチ、ヨーロッパ料理","area":"東池袋","rating":3.47,"reviews":495},{"name":"肉プロジェクト 高田馬場本店","genre":"イタリアン、シュラスコ","area":"高田馬場","rating":3.09,"reviews":36},{"name":"タイサバイ パルコ店","genre":"タイ料理、ビュッフェ、ダイニングバー","area":"池袋","rating":3.47,"reviews":410},{"name":"海ノ司 池袋店","genre":"居酒屋、海鮮、日本酒バー","area":"池袋","rating":3.52,"reviews":155},{"name":"地鶏専門店 鳥一筋 池袋店","genre":"居酒屋、焼き鳥、鳥料理","area":"池袋","rating":3.26,"reviews":74},{"name":"ムーさんの蒸鍋館","genre":"中華料理","area":"池袋","rating":3.34,"reviews":103},{"name":"小河帮川菜","genre":"四川料理","area":"池袋","rating":null,"reviews":4},{"name":"串カツ田中 池袋サンシャイン店","genre":"串揚げ、居酒屋、うどん","area":"東池袋","rating":3.06,"reviews":50},{"name":"〆蕎麦 フクロウ","genre":"居酒屋、そば、日本酒バー","area":"池袋","rating":3.47,"reviews":350},{"name":"池袋 寿司 個室 空","genre":"寿司、海鮮、日本料理","area":"池袋","rating":3.33,"reviews":312},{"name":"まめたい寿司 牛込柳町店","genre":"居酒屋、寿司、海鮮","area":"早稲田","rating":3.18,"reviews":43},{"name":"座135 池袋本店","genre":"居酒屋、中華料理、餃子","area":"池袋","rating":3.16,"reviews":145},{"name":"九匠 池袋店","genre":"居酒屋、海鮮、鍋","area":"池袋","rating":3.31,"reviews":141},{"name":"肉肉肉","genre":"焼肉、しゃぶしゃぶ、すき焼き","area":"池袋","rating":3.26,"reviews":61},{"name":"酒LAB 池袋西口店","genre":"居酒屋、海鮮","area":"池袋","rating":3.09,"reviews":31},{"name":"屋台屋 博多劇場 池袋東口店","genre":"居酒屋、餃子、もつ鍋","area":"池袋","rating":3.09,"reviews":114},{"name":"神田の肉バル RUMP CAP 池袋西口店","genre":"肉バル、ダイニングバー、ステーキ","area":"池袋","rating":3.24,"reviews":120},{"name":"茶薫小籠包飯店 池袋パルコ店","genre":"中華料理、小籠包、ラーメン","area":"池袋","rating":3.46,"reviews":248},{"name":"焼肉 牛山道 池袋本店","genre":"焼肉、韓国料理、居酒屋","area":"池袋","rating":3.4,"reviews":234},{"name":"うに小屋 高田馬場店","genre":"海鮮、居酒屋、焼き鳥","area":"高田馬場","rating":3.43,"reviews":313},{"name":"カフェ コットンクラブ","genre":"ダイニングバー、カフェ、イタリアン","area":"高田馬場","rating":3.49,"reviews":855},{"name":"焼鳥 ふじ井","genre":"焼き鳥","area":"池袋","rating":3.2,"reviews":32},{"name":"串屋さむらい","genre":"居酒屋、串揚げ、焼き鳥","area":"池袋","rating":3.1,"reviews":25},{"name":"吟乃月 池袋店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.0,"reviews":2},{"name":"いろどり 池袋","genre":"居酒屋、焼き鳥、水炊き","area":"池袋","rating":3.42,"reviews":374},{"name":"酒バル guigui","genre":"居酒屋、海鮮、日本酒バー","area":"池袋","rating":3.38,"reviews":124},{"name":"松阪牛一頭買い 大衆焼肉 松阪牛ホルモン","genre":"焼肉、ホルモン","area":"池袋","rating":3.46,"reviews":119},{"name":"BATON 東池袋店","genre":"ビストロ、イタリアン、ステーキ","area":"東池袋","rating":3.45,"reviews":362},{"name":"炉端とおでん 呼炉凪来 池袋店","genre":"居酒屋、おでん、ろばた焼き","area":"池袋","rating":3.16,"reviews":312},{"name":"Bistro The Meat 池袋東口店","genre":"居酒屋、イタリアン、肉バル","area":"池袋","rating":3.09,"reviews":68},{"name":"居酒屋革命 酔っ手羽 池袋西口店","genre":"居酒屋、手羽先、揚げ物","area":"池袋","rating":3.07,"reviews":75},{"name":"池袋 肉酒場也","genre":"焼肉、冷麺、居酒屋","area":"池袋","rating":3.37,"reviews":126},{"name":"Shimoda Brewing Ikebukuro","genre":"ピザ、ビアバー、イタリアン","area":"池袋","rating":3.15,"reviews":21},{"name":"きなり","genre":"焼き鳥","area":"早稲田","rating":3.46,"reviews":218},{"name":"炭焼道楽 池袋店","genre":"焼肉、居酒屋、ステーキ","area":"池袋","rating":3.3,"reviews":215},{"name":"24/7 cafe apartment 池袋","genre":"カフェ、ダイニングバー、パスタ","area":"池袋","rating":3.47,"reviews":348},{"name":"焼肉ウルフ 池袋本店","genre":"焼肉、韓国料理、ステーキ","area":"池袋","rating":3.43,"reviews":296},{"name":"八","genre":"居酒屋","area":"高田馬場","rating":3.39,"reviews":81},{"name":"朝搾り牛乳Cafe 海畑牧場","genre":"カフェ","area":"池袋","rating":3.21,"reviews":47},{"name":"食べ放題 個室 ハワイアン肉バル KAUAI 高田馬場店","genre":"居酒屋、イタリアン、ダイニングバー","area":"高田馬場","rating":3.05,"reviews":19},{"name":"蟹まみれTOKYO","genre":"かに、寿司、居酒屋","area":"池袋","rating":3.18,"reviews":56},{"name":"焼肉うし","genre":"焼肉、ホルモン、居酒屋","area":"池袋","rating":3.37,"reviews":197},{"name":"ベルギービール カフェ ベル・オーブ 東京芸術劇場","genre":"カフェ、イタリアン、居酒屋","area":"池袋","rating":3.49,"reviews":526},{"name":"ランドーズ","genre":"居酒屋、鉄板焼き、ビアホール","area":"池袋","rating":3.41,"reviews":336},{"name":"十七番地 高田馬場店","genre":"居酒屋","area":"高田馬場","rating":3.26,"reviews":121},{"name":"シュラスコ＆ビアバー ゴッチバッタ 池袋西口","genre":"シュラスコ、焼肉、ビュッフェ","area":"池袋","rating":3.45,"reviews":537},{"name":"司 池袋東口店","genre":"居酒屋、海鮮、鍋","area":"池袋","rating":3.26,"reviews":84},{"name":"串焼きバル mansun 東池袋店","genre":"居酒屋、焼き鳥、イタリアン","area":"池袋","rating":3.33,"reviews":66},{"name":"はかた地どり屋 福栄組合 池袋店","genre":"居酒屋、鳥料理、もつ鍋","area":"池袋","rating":3.23,"reviews":120},{"name":"魚や 池袋店","genre":"居酒屋、海鮮、日本酒バー","area":"池袋","rating":3.3,"reviews":207},{"name":"旨い焼鳥と和食居酒屋 酔い酔い 池袋本店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.39,"reviews":56},{"name":"焼き鳥一 池袋本店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.08,"reviews":20},{"name":"御影蔵 池袋東武店","genre":"海鮮、日本酒バー、居酒屋","area":"池袋","rating":3.38,"reviews":180},{"name":"蜀簽","genre":"中華料理、四川料理、火鍋","area":"高田馬場","rating":3.11,"reviews":45},{"name":"聚福楼","genre":"中華料理、焼肉、ジンギスカン","area":"池袋","rating":3.49,"reviews":907},{"name":"焼肉清江苑 別邸 るあう","genre":"焼肉、ホルモン、韓国料理","area":"池袋","rating":3.26,"reviews":56},{"name":"個室完備 団欒 池袋店","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.62,"reviews":108},{"name":"ひとり焼肉 美そ乃","genre":"焼肉、ホルモン","area":"池袋","rating":3.45,"reviews":257},{"name":"辛楽川火鍋 池袋店","genre":"火鍋、四川料理","area":"池袋","rating":3.32,"reviews":184},{"name":"権兵衛のいろり屋 池袋店","genre":"居酒屋、鳥料理、鍋","area":"池袋","rating":3.6,"reviews":134},{"name":"鉄板Diner JAKEN 池袋本店","genre":"ステーキ、鉄板焼き、ハンバーグ","area":"池袋","rating":3.48,"reviews":451},{"name":"北京","genre":"中華料理","area":"高田馬場","rating":3.09,"reviews":32},{"name":"旬鮮酒場天狗 池袋東口店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.08,"reviews":87},{"name":"文山包 池袋店","genre":"中華料理、飲茶・点心、居酒屋","area":"池袋","rating":null,"reviews":94},{"name":"鉄板 まさや 池袋店","genre":"居酒屋、鉄板焼き、ステーキ","area":"池袋","rating":3.35,"reviews":105},{"name":"炭火焼肉 尹家","genre":"焼肉、韓国料理、居酒屋","area":"池袋","rating":3.3,"reviews":80},{"name":"かまくら個室バル KAMAKURAYA 池袋店","genre":"居酒屋、ダイニングバー、洋食","area":"池袋","rating":3.24,"reviews":268},{"name":"韓国家庭料理 チェゴヤ WACCA池袋店","genre":"韓国料理、冷麺、居酒屋","area":"池袋","rating":3.03,"reviews":23},{"name":"シズルアジアンダイニング","genre":"アジア・エスニック","area":"早稲田","rating":3.08,"reviews":11},{"name":"魚の旨い店 池袋店","genre":"海鮮、居酒屋、日本酒バー","area":"池袋","rating":3.49,"reviews":588},{"name":"2100K冒鴨燙肚 高田馬場店","genre":"中華料理、四川料理、鍋","area":"高田馬場","rating":3.15,"reviews":27},{"name":"こもれび 池袋店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.61,"reviews":238},{"name":"HIKARI","genre":"フレンチ、イノベーティブ、ステーキ","area":"池袋","rating":3.64,"reviews":343},{"name":"イタリアンカジュアルダイニング何駄感駄","genre":"イタリアン、ワインバー、パスタ","area":"東池袋","rating":3.32,"reviews":104},{"name":"博多餃子舎 鉄なべ 西池袋店","genre":"餃子、もつ鍋、居酒屋","area":"池袋","rating":3.09,"reviews":97},{"name":"御八 池袋店","genre":"居酒屋、もつ鍋、焼き鳥","area":"池袋","rating":3.35,"reviews":206},{"name":"博多ラーメン でぶちゃん 高田馬場本店","genre":"ラーメン、居酒屋、餃子","area":"高田馬場","rating":3.71,"reviews":1072},{"name":"八幡鮨","genre":"寿司、海鮮","area":"早稲田","rating":3.36,"reviews":93},{"name":"羊貴族・四季香 池袋北口店","genre":"中華料理、飲茶・点心、居酒屋","area":"池袋","rating":3.48,"reviews":103},{"name":"小米椒","genre":"中華料理、四川料理、アジア・エスニック","area":"高田馬場","rating":3.22,"reviews":45},{"name":"ジョーズ シャンハイ ニューヨーク 池袋店","genre":"中華料理、担々麺、飲茶・点心","area":"東池袋","rating":3.49,"reviews":1018},{"name":"麻布笄軒 池袋店","genre":"洋食、ハンバーグ、カレー","area":"池袋","rating":3.43,"reviews":303},{"name":"鮨処 銀座福助 サンシャイン60店","genre":"寿司、海鮮","area":"東池袋","rating":3.31,"reviews":187},{"name":"味道苑 池袋店","genre":"焼肉、ホルモン、居酒屋","area":"池袋","rating":3.43,"reviews":287},{"name":"ニホンバシブルワリー 池袋店","genre":"ダイニングバー、イタリアン、カフェ","area":"池袋","rating":3.54,"reviews":500},{"name":"地酒と肴 よっとこ","genre":"居酒屋、海鮮、日本酒バー","area":"池袋","rating":3.24,"reviews":47},{"name":"別邸 壽","genre":"しゃぶしゃぶ、すき焼き、鍋","area":"池袋","rating":3.45,"reviews":359},{"name":"寿司居酒屋 まるがまる 高田馬場店","genre":"寿司、居酒屋、海鮮丼","area":"高田馬場","rating":3.42,"reviews":184},{"name":"池袋 YaoyaBal","genre":"バル、野菜料理、居酒屋","area":"池袋","rating":3.32,"reviews":89},{"name":"隠れ家個室ダイニング DOMO DOMO 池袋東口店","genre":"居酒屋、ステーキ、ダイニングバー","area":"東池袋","rating":3.09,"reviews":48},{"name":"とある池袋のビストロ酒場 Bisrock","genre":"イタリアン、バル、居酒屋","area":"池袋","rating":3.39,"reviews":224},{"name":"2000円 食べ放題飲み放題 居酒屋 おすすめ屋 池袋店","genre":"居酒屋、海鮮、もつ鍋","area":"池袋","rating":3.08,"reviews":104},{"name":"月亭 池袋店","genre":"しゃぶしゃぶ、日本料理、すき焼き","area":"池袋","rating":3.47,"reviews":530},{"name":"喃風 池袋駅前店","genre":"お好み焼き、もんじゃ焼き、ビュッフェ","area":"池袋","rating":3.21,"reviews":287},{"name":"クチーナ ロマーナ パピ","genre":"イタリアン、パスタ、ピザ","area":"池袋","rating":3.31,"reviews":92},{"name":"地酒遊楽 裏や","genre":"日本酒バー、居酒屋","area":"池袋","rating":3.44,"reviews":118},{"name":"スミビトケムリ 池袋店","genre":"居酒屋、もつ焼き、焼き鳥","area":"池袋","rating":3.33,"reviews":244},{"name":"旨い海鮮の店 居酒屋 凛 池袋本店","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.31,"reviews":34},{"name":"キット・ココニール 池袋","genre":"イタリアン、創作料理、バル","area":"池袋","rating":3.2,"reviews":96},{"name":"お肉一枚売りの焼肉店 焼肉とどろき 池袋東口店","genre":"焼肉、ホルモン、ステーキ","area":"池袋","rating":3.62,"reviews":146},{"name":"極ッ","genre":"居酒屋、焼き鳥、日本酒バー","area":"高田馬場","rating":3.35,"reviews":82},{"name":"豚ブザ 池袋店","genre":"韓国料理、焼肉、居酒屋","area":"池袋","rating":3.32,"reviews":86},{"name":"焼鳥どん 池袋西口店","genre":"焼き鳥、居酒屋、もつ焼き","area":"池袋","rating":3.08,"reviews":36},{"name":"オーヴェスト","genre":"イタリアン、ワインバー、パスタ","area":"池袋","rating":3.46,"reviews":245},{"name":"逸品飲茶縁茗","genre":"中華料理、飲茶・点心、居酒屋","area":"池袋","rating":3.39,"reviews":164},{"name":"池袋の肉バル Carne","genre":"肉バル、イタリアン","area":"池袋","rating":3.18,"reviews":175},{"name":"鮮魚と日本酒 魚ぽん大蔵 池袋本店","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.41,"reviews":170},{"name":"韓国料理＆生サムギョプサル ビビサム 池袋東口店","genre":"韓国料理、居酒屋、焼肉","area":"池袋","rating":3.26,"reviews":106},{"name":"杵屋 池袋ルミネ店","genre":"うどん、そば、居酒屋","area":"池袋","rating":3.12,"reviews":116},{"name":"韓国料理 ホンデポチャ 池袋店","genre":"韓国料理、焼肉、居酒屋","area":"池袋","rating":3.24,"reviews":238},{"name":"完全個室 つなぎや 池袋店","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.32,"reviews":115},{"name":"東京もんじゃ くらや 池袋店","genre":"もんじゃ焼き、お好み焼き、居酒屋","area":"池袋","rating":3.16,"reviews":107},{"name":"古城の国のアリス","genre":"イタリアン、ダイニングバー、カフェ","area":"池袋","rating":3.31,"reviews":305},{"name":"炉端とおでん 完全個室居酒屋 ろばた将 池袋店","genre":"居酒屋、ろばた焼き、おでん","area":"池袋","rating":3.2,"reviews":105},{"name":"餃子 小籠包 福包酒場 高田馬場店","genre":"中華料理、餃子、居酒屋","area":"高田馬場","rating":3.05,"reviews":11},{"name":"SALVATORE CUOMO & GRILL 高田馬場","genre":"イタリアン、ステーキ、ダイニングバー","area":"早稲田","rating":3.37,"reviews":101},{"name":"全席完全個室居酒屋 高田馬場邸 さかえ通り店","genre":"居酒屋、牛タン、焼き鳥","area":"高田馬場","rating":3.09,"reviews":71},{"name":"LA BODEGA PARRILLA","genre":"スペイン料理、バル、ステーキ","area":"池袋","rating":3.38,"reviews":355},{"name":"小笠原伯爵邸","genre":"スペイン料理","area":"早稲田","rating":3.7,"reviews":888},{"name":"大衆酒場 大越 西池袋店","genre":"居酒屋、焼き鳥、からあげ","area":"池袋","rating":3.08,"reviews":10},{"name":"完全個室完備 郷土酒肴 あおもり屋","genre":"居酒屋、日本酒バー、海鮮","area":"池袋","rating":3.49,"reviews":1113},{"name":"とんちゃん 池袋南店","genre":"韓国料理、焼肉、居酒屋","area":"池袋","rating":3.08,"reviews":71},{"name":"味工房 一酔万笑","genre":"居酒屋、日本酒バー、海鮮","area":"高田馬場","rating":3.15,"reviews":36},{"name":"池袋 大人のハンバーグ","genre":"ハンバーグ、ダイニングバー、ステーキ","area":"池袋","rating":3.48,"reviews":658},{"name":"たまには焼肉陸","genre":"焼肉、ホルモン、居酒屋","area":"高田馬場","rating":3.31,"reviews":64},{"name":"産地直送 お魚とお野菜 海畑","genre":"居酒屋、海鮮、日本酒バー","area":"池袋","rating":3.33,"reviews":145},{"name":"焼鳥 MOZU","genre":"焼き鳥、居酒屋、ダイニングバー","area":"池袋","rating":3.32,"reviews":124},{"name":"焼肉ホルモンたけ田 高田馬場店","genre":"焼肉、ホルモン、居酒屋","area":"高田馬場","rating":3.09,"reviews":70},{"name":"シュラスコ食べ放題 肉ダイニング エルビーノ 池袋店","genre":"居酒屋、シュラスコ、イタリアン","area":"池袋","rating":3.09,"reviews":60},{"name":"やきとん ひなた 池袋東口店","genre":"もつ焼き、居酒屋、焼き鳥","area":"池袋","rating":3.37,"reviews":524},{"name":"CheeseTable 池袋店","genre":"チーズ料理、カフェ、居酒屋","area":"池袋","rating":3.4,"reviews":494},{"name":"磯丸水産 池袋西口2号店","genre":"居酒屋、海鮮、寿司","area":"池袋","rating":3.05,"reviews":70},{"name":"池袋焼肉kintan","genre":"焼肉、ステーキ、ホルモン","area":"池袋","rating":3.47,"reviews":230},{"name":"匠サムギョプサル","genre":"韓国料理、焼肉、居酒屋","area":"高田馬場","rating":3.4,"reviews":143},{"name":"おでん・豆富・鉄板焼 升屋 Esola池袋店","genre":"居酒屋、おでん、鉄板焼き","area":"池袋","rating":3.11,"reviews":27},{"name":"炉端焼き・おでん 個室居酒屋 いろり","genre":"居酒屋、おでん、ろばた焼き","area":"池袋","rating":3.51,"reviews":239},{"name":"餃子市場 早稲田店","genre":"餃子、担々麺、居酒屋","area":"早稲田","rating":3.09,"reviews":48},{"name":"牡蠣&海老バル EAST BLUE 池袋東口店","genre":"オイスターバー、イタリアン、かき","area":"池袋","rating":3.43,"reviews":248},{"name":"鈴の音 池袋店","genre":"居酒屋、牛タン、海鮮","area":"池袋","rating":3.27,"reviews":91},{"name":"てけてけ 池袋東口2号店","genre":"居酒屋、焼き鳥、食堂","area":"池袋","rating":3.03,"reviews":39},{"name":"リトル デリリウムカフェ ハレザ池袋","genre":"イタリアン、居酒屋、カフェ","area":"池袋","rating":3.47,"reviews":674},{"name":"鮨 ふくろう","genre":"寿司、日本料理、海鮮","area":"池袋","rating":3.28,"reviews":55},{"name":"彩伽亭","genre":"焼肉、居酒屋、韓国料理","area":"池袋","rating":3.38,"reviews":193},{"name":"てけてけ 高田馬場さかえ通り店","genre":"居酒屋、焼き鳥、食堂","area":"高田馬場","rating":3.04,"reviews":52},{"name":"BIKiNi medi 池袋東武店","genre":"スペイン料理、牛料理、イタリアン","area":"池袋","rating":3.48,"reviews":436},{"name":"海鮮居酒屋 いずみ 池袋店","genre":"居酒屋、海鮮、串焼き","area":"池袋","rating":3.08,"reviews":9},{"name":"Natural Wine Base KOTOBUKI 池袋","genre":"イタリアン、ワインバー、ジビエ料理","area":"池袋","rating":3.38,"reviews":165},{"name":"ヤキトリ バードナイン","genre":"居酒屋、焼き鳥、鍋","area":"池袋","rating":3.28,"reviews":52},{"name":"135酒場 池袋立教通り店","genre":"居酒屋、中華料理、餃子","area":"池袋","rating":3.11,"reviews":111},{"name":"個室居酒屋 炭火焼き鳥ほむら 池袋本店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":null,"reviews":1},{"name":"大馬鹿地蔵 池袋西口店","genre":"居酒屋、海鮮、ビアホール","area":"池袋","rating":3.19,"reviews":71},{"name":"串かつとお酒でんがな 池袋東口店","genre":"串揚げ、居酒屋","area":"池袋","rating":3.08,"reviews":159},{"name":"玄品 池袋 ふぐ・うなぎ・かに料理","genre":"ふぐ、うなぎ、居酒屋","area":"池袋","rating":3.26,"reviews":274},{"name":"ババfeel 焼鴨","genre":"アジア・エスニック、居酒屋、鉄板焼き","area":"高田馬場","rating":3.24,"reviews":34},{"name":"牛タン専門店やまと 池袋店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.56,"reviews":200},{"name":"貴仙 2号店","genre":"焼肉、韓国料理、ホルモン","area":"池袋","rating":3.34,"reviews":113},{"name":"やきとりセンター 池袋サンシャイン通り店","genre":"焼き鳥","area":"池袋","rating":3.03,"reviews":9},{"name":"大阪焼肉・ホルモン ふたご 池袋東口店","genre":"焼肉、居酒屋、ホルモン","area":"池袋","rating":3.08,"reviews":72},{"name":"逢鳥","genre":"焼き鳥、鳥料理、居酒屋","area":"池袋","rating":3.42,"reviews":269},{"name":"鉄板焼さくら","genre":"鉄板焼き、ステーキ、ワインバー","area":"高田馬場","rating":3.6,"reviews":229},{"name":"安楽亭 池袋北口店","genre":"焼肉、ホルモン、韓国料理","area":"池袋","rating":3.05,"reviews":52},{"name":"陸奥前鮨 善知鳥","genre":"寿司、日本料理、海鮮","area":"池袋","rating":3.52,"reviews":166},{"name":"旨味りとり 池袋店","genre":"居酒屋、焼酎バー","area":"池袋","rating":3.05,"reviews":8},{"name":"焼肉食べ放題ブラックホール 池袋東口店","genre":"焼肉、ビュッフェ","area":"池袋","rating":3.36,"reviews":186},{"name":"生蕎麦 浅野屋 東池袋駅前ライズアリーナ店","genre":"そば、居酒屋、日本酒バー","area":"池袋","rating":3.36,"reviews":143},{"name":"Masala Hut 池袋店","genre":"インド料理、ネパール料理、インドカレー","area":"池袋","rating":3.4,"reviews":170},{"name":"鹿児島県霧島市 塚田農場 池袋西口公園店","genre":"居酒屋、鳥料理、肉料理","area":"池袋","rating":3.07,"reviews":84},{"name":"京出汁おでんと旬菜天ぷら 鳥居くぐり 池袋店","genre":"居酒屋、おでん、海鮮","area":"池袋","rating":3.43,"reviews":670},{"name":"餃子の安亭 高田馬場店","genre":"中華料理、餃子、居酒屋","area":"高田馬場","rating":3.36,"reviews":244},{"name":"池袋ぱすたかん","genre":"お好み焼き、もんじゃ焼き","area":"池袋","rating":3.01,"reviews":12},{"name":"ルイブ","genre":"ビストロ、イタリアン、バル","area":"池袋","rating":3.4,"reviews":134},{"name":"隠れ房 池袋店","genre":"居酒屋、日本料理、海鮮","area":"池袋","rating":3.33,"reviews":709},{"name":"焼肉 哲 TETSU 池袋店","genre":"焼肉、居酒屋、ホルモン","area":"池袋","rating":3.46,"reviews":342},{"name":"元氣七輪焼肉 牛繁 高田馬場店","genre":"焼肉、ホルモン、韓国料理","area":"高田馬場","rating":3.01,"reviews":16},{"name":"串焼きバル ManSun 池袋西口店","genre":"居酒屋、焼き鳥、バル","area":"池袋","rating":3.32,"reviews":117},{"name":"焼肉 九田家","genre":"焼肉、居酒屋、韓国料理","area":"池袋","rating":3.35,"reviews":246},{"name":"美肉酒房 鮮Ｑ","genre":"居酒屋、焼き鳥、もつ焼き","area":"池袋","rating":3.41,"reviews":207},{"name":"漢方和牛とかき小屋 四喜","genre":"居酒屋、かき、オイスターバー","area":"池袋","rating":3.43,"reviews":268},{"name":"薬膳麻辣湯鍋 羊美人 Yang Mei Ren","genre":"しゃぶしゃぶ、火鍋、中華料理","area":"東池袋","rating":3.08,"reviews":17},{"name":"沖縄居酒屋 首里城","genre":"沖縄料理、居酒屋、創作料理","area":"池袋","rating":3.18,"reviews":22},{"name":"MEAT&WINE WINEHALL GLAMOUR 池袋","genre":"イタリアン、肉バル、ダイニングバー","area":"池袋","rating":3.36,"reviews":256},{"name":"酒庵 鯖・番・彩","genre":"居酒屋、海鮮","area":"池袋","rating":3.55,"reviews":227},{"name":"肉問屋直送 焼肉処蔵元","genre":"焼肉、居酒屋、冷麺","area":"池袋","rating":3.41,"reviews":233},{"name":"汰佑","genre":"居酒屋、海鮮、天ぷら","area":"池袋","rating":3.33,"reviews":44},{"name":"石焼地鳥 石庵 池袋西口店","genre":"鳥料理、焼き鳥、居酒屋","area":"池袋","rating":3.17,"reviews":120},{"name":"和醸Tokyo","genre":"居酒屋、創作料理","area":"池袋","rating":3.6,"reviews":124},{"name":"Fry家","genre":"とんかつ、肉料理、洋食","area":"高田馬場","rating":3.64,"reviews":733},{"name":"北前そば高田屋 池袋西口店","genre":"そば、居酒屋、天ぷら","area":"池袋","rating":3.2,"reviews":363},{"name":"78 ステーキ 池袋","genre":"ステーキ、バル、沖縄料理","area":"池袋","rating":3.43,"reviews":184},{"name":"四十八漁場 池袋東口店","genre":"海鮮、居酒屋、日本酒バー","area":"池袋","rating":3.23,"reviews":298},{"name":"天府火鍋巷子 池袋店","genre":"火鍋、中華料理","area":"池袋","rating":3.02,"reviews":37},{"name":"ラムしゃぶ金の目 池袋店","genre":"しゃぶしゃぶ、居酒屋、海鮮","area":"池袋","rating":3.38,"reviews":146},{"name":"和肴海 池袋店","genre":"居酒屋、焼き鳥、海鮮","area":"池袋","rating":3.09,"reviews":20},{"name":"十割蕎麦 鴨料理 ならや","genre":"そば、日本酒バー、日本料理","area":"池袋","rating":3.49,"reviews":593},{"name":"ふらんす亭 池袋サンシャイン60階通り店","genre":"ステーキ、ハンバーグ、カレー","area":"池袋","rating":3.09,"reviews":158},{"name":"牛犇焼肉","genre":"焼肉、ホルモン、韓国料理","area":"高田馬場","rating":3.31,"reviews":89},{"name":"ビリー・バルゥーズ・ビア・バー 高田馬場店","genre":"ビアバー、ダイニングバー、居酒屋","area":"高田馬場","rating":3.11,"reviews":22},{"name":"それゆけ 鶏ヤロー 高田馬場店","genre":"居酒屋、串揚げ、海鮮","area":"高田馬場","rating":3.05,"reviews":14},{"name":"知音食堂","genre":"四川料理、中華料理、火鍋","area":"池袋","rating":3.49,"reviews":822},{"name":"とん長","genre":"もつ焼き、居酒屋、焼き鳥","area":"池袋","rating":3.34,"reviews":114},{"name":"ウラニワ 高田馬場店","genre":"居酒屋、日本酒バー、海鮮","area":"高田馬場","rating":3.21,"reviews":120},{"name":"ベルサイユの豚 池袋","genre":"バル、イタリアン、肉料理","area":"池袋","rating":3.26,"reviews":244},{"name":"Primo Passo","genre":"イタリアン、バル、ビストロ","area":"早稲田","rating":3.28,"reviews":65},{"name":"トロ政 池袋店","genre":"居酒屋、海鮮、寿司","area":"池袋","rating":3.32,"reviews":306},{"name":"完全個室居酒屋 和金","genre":"居酒屋、海鮮、焼き鳥","area":"池袋","rating":3.27,"reviews":102},{"name":"江記 香港打邊爐 池袋店","genre":"中華料理、居酒屋、飲茶・点心","area":"池袋","rating":3.27,"reviews":68},{"name":"フラットリア","genre":"イタリアン、パスタ、ワインバー","area":"高田馬場","rating":3.4,"reviews":181},{"name":"IZAKAYA 場琉 GOO","genre":"バル、イタリアン、ダイニングバー","area":"池袋","rating":3.3,"reviews":84},{"name":"テバク家","genre":"韓国料理","area":"池袋","rating":3.33,"reviews":74},{"name":"からげんき 高田馬場店","genre":"焼き鳥、からあげ、もつ鍋","area":"高田馬場","rating":3.21,"reviews":117},{"name":"ホルモン みや美","genre":"ホルモン、焼肉、居酒屋","area":"高田馬場","rating":3.24,"reviews":41},{"name":"炭火焼肉 牛道 池袋本店","genre":"焼肉、居酒屋、韓国料理","area":"池袋","rating":3.29,"reviews":101},{"name":"生ラムジンギスカンボンズ 池袋本店","genre":"ジンギスカン、焼肉、居酒屋","area":"池袋","rating":null,"reviews":8},{"name":"焼肉の和民 池袋東口店","genre":"焼肉、居酒屋、韓国料理","area":"池袋","rating":3.08,"reviews":116},{"name":"CARTA 池袋店","genre":"イタリアン、オイスターバー、ビアガーデン","area":"池袋","rating":3.43,"reviews":209},{"name":"Kitchen AJITO","genre":"イタリアン、オーガニック、ダイニングバー","area":"池袋","rating":3.32,"reviews":80},{"name":"清江苑 池袋西口本店","genre":"焼肉、韓国料理、牛タン","area":"池袋","rating":3.49,"reviews":562},{"name":"隣のロッヂ","genre":"ジンギスカン、焼肉、居酒屋","area":"高田馬場","rating":3.37,"reviews":121}];
+    let filtered = [...ALL_RESTAURANTS];
+    let currentPage = 0;
+    const PER_PAGE = 20;
+
+    function getRatingColor(r) {
+      if (!r) return 'text-gray-400';
+      if (r >= 3.5) return 'text-amber-500';
+      if (r >= 3.3) return 'text-amber-400';
+      return 'text-gray-600';
+    }
+
+    function getRatingStars(r) {
+      if (!r) return '<span class="text-gray-400 text-xs">-</span>';
+      const full = Math.floor(r);
+      const half = r - full >= 0.25 ? 1 : 0;
+      let stars = '';
+      for (let i = 0; i < full && i < 5; i++) stars += '★';
+      if (half && full < 5) stars += '☆';
+      return '<span class="' + getRatingColor(r) + ' font-bold">' + (r ? r.toFixed(2) : '-') + '</span>';
+    }
+
+    function renderTable() {
+      const tbody = document.getElementById('tb-body');
+      const start = currentPage * PER_PAGE;
+      const page = filtered.slice(start, start + PER_PAGE);
+      tbody.innerHTML = page.map((r, i) => {
+        const genreShort = r.genre.split('、').slice(0, 2).join('、');
+        return '<tr class="border-b border-gray-100 hover:bg-blue-50/30 transition-colors">' +
+          '<td class="px-5 py-3 text-gray-400 text-xs">' + (start + i + 1) + '</td>' +
+          '<td class="px-5 py-3"><span class="font-medium text-dark">' + r.name + '</span>' +
+          '<span class="md:hidden block text-xs text-gray-400 mt-0.5">' + genreShort + '</span></td>' +
+          '<td class="px-5 py-3 text-gray-600 text-xs hidden md:table-cell">' + genreShort + '</td>' +
+          '<td class="px-5 py-3"><span class="inline-block bg-gray-100 text-gray-600 text-xs px-2 py-0.5 rounded">' + r.area + '</span></td>' +
+          '<td class="px-5 py-3 text-center">' + getRatingStars(r.rating) + '</td>' +
+          '<td class="px-5 py-3 text-center text-gray-600">' + (r.reviews || '-') + '<span class="text-xs text-gray-400">件</span></td>' +
+          '</tr>';
+      }).join('');
+
+      const totalPages = Math.ceil(filtered.length / PER_PAGE);
+      document.getElementById('tb-page-info').textContent = totalPages > 0 ? (currentPage + 1) + ' / ' + totalPages + ' ページ' : '0件';
+      document.getElementById('tb-prev').disabled = currentPage === 0;
+      document.getElementById('tb-next').disabled = currentPage >= totalPages - 1;
+      document.getElementById('tb-count').textContent = filtered.length;
+    }
+
+    function filterRestaurants() {
+      const search = document.getElementById('tb-search').value.toLowerCase();
+      const area = document.getElementById('tb-area').value;
+      const genre = document.getElementById('tb-genre').value;
+      const sort = document.getElementById('tb-sort').value;
+
+      filtered = ALL_RESTAURANTS.filter(r => {
+        if (search && !r.name.toLowerCase().includes(search)) return false;
+        if (area && r.area !== area) return false;
+        if (genre && !r.genre.includes(genre)) return false;
+        return true;
+      });
+
+      if (sort === 'rating-desc') {
+        filtered.sort((a, b) => (b.rating || 0) - (a.rating || 0));
+      } else if (sort === 'reviews-desc') {
+        filtered.sort((a, b) => (b.reviews || 0) - (a.reviews || 0));
+      } else if (sort === 'name-asc') {
+        filtered.sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+      }
+
+      currentPage = 0;
+      renderTable();
+    }
+
+    function changePage(dir) {
+      const totalPages = Math.ceil(filtered.length / PER_PAGE);
+      currentPage = Math.max(0, Math.min(totalPages - 1, currentPage + dir));
+      renderTable();
+      document.getElementById('tabelog-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function resetFilters() {
+      document.getElementById('tb-search').value = '';
+      document.getElementById('tb-area').value = '';
+      document.getElementById('tb-genre').value = '';
+      document.getElementById('tb-sort').value = 'rating-desc';
+      filterRestaurants();
+    }
+
+    // 初期表示
+    filterRestaurants();
+  </script>
+
+  <!-- ===== スクロールアニメーション ===== -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
