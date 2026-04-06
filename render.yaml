@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: wiz-lp
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /wiz-lp.html
